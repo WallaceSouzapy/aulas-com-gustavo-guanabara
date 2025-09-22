@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cuscuz na Cumbuca</title>
+    <link rel="stylesheet" href="style-carrinho-flutuante.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <ul class="links">
+                <li><a href="#SALGADAS">SALGADAS</a></li>
+                <li><a href="#DOCES">DOCES</a></li>
+                <li><a href="#BEBIDAS">BEBIDAS</a></li>
+                <li><a href="#CONTATOS">CONTATOS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="icone-carrinho-flutuante" class="cart-icon hidden">
+        <i class="fas fa-shopping-cart" id="icone-carrinho"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+
+    <section class="hero">
+        <div class="hero-overlay"></div> <!-- Alterado de 'overlay' para 'hero-overlay' -->
+        <div class="hero-conteudo">
+            <h1>Cuscuz na Cumbuca</h1>
+            <p>Sabores do Nordeste servidos com carinho e tradição</p>
+            <div class="hero-buttons">
+                <a href="#SALGADAS" class="botao-hero">Ver Cardápio</a>
+                <button id="btn-entrar" class="botao-hero">
+                    Entrar <i class="fa-solid fa-up-right-from-square"></i>
+                </button>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <main class="main-conteiner">
+        <aside class="esquerda">
+            <h1 class="titulo-sobre">Sobre Nós</h1>
+            <p class="descricao">
+                O Cuscuz na Cumbuca nasceu da vontade de resgatar e valorizar os sabores da nossa
+                terra, servidos do jeitinho que a gente aprendeu com as avós: com carinho, simplicidade e muita história
+                pra contar.
+
+                Mais do que comida, oferecemos afeto em forma de prato. Cada cumbuca que sai da nossa cozinha carrega
+                memórias, tradições e o orgulho de uma cultura rica, forte e cheia de sabor.
+
+                Acreditamos que o cuscuz é muito mais do que um alimento — é patrimônio afetivo do povo nordestino. E
+                aqui, ele é o protagonista de um cardápio feito pra aquecer o coração e encher de orgulho quem sente
+                saudade de casa ou quer conhecer de verdade o sabor do Nordeste.
+            </p>
+        </aside>
+        <aside class="direita">
+            <img src="img/ChatGPT Image 27 de jun. de 2025, 20_55_25.png" alt="SubLogo" />
+        </aside>
+    </main>
+
+    <section class="menu-tapiocas" id="SALGADAS">
+        <h2 class="titulo-cardapio">Cumbucas Salgadas</h2>
+        <div class="cardapio-container">
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca de carne seca" />
+                <h3>Nordestino Raiz<span class="preco">R$ 18,00</span></h3>
+                <p>Flocão de milho com calabresa frita, queijo coalho, cebola roxa e pimenta biquinho ao azeite.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Cuscuz Da Roça<span class="preco">R$ 22,00</span></h3>
+                <p>Com carne seca desfiada, manteiga de garrafa, milho verde e cheiro-verde fresco.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Cuscuz Caprichado<span class="preco">R$ 20,00</span></h3>
+                <p>Frango temperado, requeijão cremoso, cenoura ralada e azeitonas.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Cuscuz Do Sertão<span class="preco">R$ 19,00</span></h3>
+                <p>Linguiça toscana, ovo mexido, pimentão vermelho e cebolinha.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Maré Alta<span class="preco">R$ 24,00</span></h3>
+                <p>Com camarão seco, tomate fresco, coentro e toque de limão.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-tapiocas" id="DOCES">
+        <h2 class="titulo-cardapio">Cumbucas Doces</h2>
+        <div class="cardapio-container">
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Cuscuz Do Amor<span class="preco">R$ 14,00</span></h3>
+                <p>Coco ralado, leite condensado e canela.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Encanto Do Sertão<span class="preco">R$ 16,00</span></h3>
+                <p>Leite de coco, rapadura, queijo coalho e cravo.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Romeu E Julieta<span class="preco">R$ 17,00</span></h3>
+                <p>Goiabada derretida, queijo minas, leite condensado e raspas de limão.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Doce Sonho<span class="preco">R$ 15,00</span></h3>
+                <p>Banana caramelizada, mel, coco queimado e canela.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/item novo.png" alt="Tapioca doce" />
+                <h3>Tropical<span class="preco">R$ 15,00</span></h3>
+                <p>Manga, maracujá, açúcar mascavo e hortelã.</p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="menu-tapiocas" id="BEBIDAS">
+        <h2 class="titulo-cardapio">BEBIDAS ARTESANAIS</h2>
+        <div class="cardapio-container">
+            <div class="card">
+                <img src="img/bebida nova.png" alt="Tapioca de carne seca" />
+                <h3>Brisa Do Sertão<span class="preco">R$ 14,00</span></h3>
+                <p>Suco gelado de abacaxi com hortelã e raspas de limão. Refrescante, leve e perfeito para dias quentes.
+                </p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/bebida nova.png" alt="Tapioca de carne seca" />
+                <h3>Cafeina Gelada<span class="preco">R$ 16,00</span></h3>
+                <p>
+                    Copo generoso de café gelado com leite, toque de baunilha e gelo cremoso. A energia que combina com
+                    o
+                    sabor do Nordeste.
+                </p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+            <div class="card">
+                <img src="img/bebida nova.png" alt="Tapioca de carne seca" />
+                <h3>Sol Tropical<span class="preco">R$ 17,00</span></h3>
+                <p>Mix de manga, maracujá e laranja com um toque de gengibre. Frutado e vibrante, servido bem gelado.
+                </p>
+
+                <div class="botoes-carrinho">
+                    <button class="btn-menor">-</button>
+                    <button class="botao-carrinho">Adicionar (0)</button>
+                    <button class="btn-maior">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="CONTATOS">
+        <h2 class="titulo-cardapio">Fale Conosco</h2>
+        <form class="form-contato" id="formContato">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem aqui..."
+                required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <div id="overlay" class="overlay hidden"></div>
+
+    <div id="carrinho-modal" class="modal hidden">
+        <h2>🛒 Seu Carrinho</h2>
+        <div id="itens-carrinho" class="itens-carrinho"></div>
+        <p id="total">Total: R$ 0,00</p>
+        <button onclick="fecharCarrinho()">Fechar</button>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const navbar = document.querySelector(".navbar");
+            const logo = document.querySelector(".logo-nav");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("shrink");
+                if (logo) logo.classList.add("shrink-logo");
+            } else {
+                navbar.classList.remove("shrink");
+                if (logo) logo.classList.remove("shrink-logo");
+            }
+        });
+
+        const form = document.getElementById('formContato');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const mensagem = document.getElementById('mensagem').value.trim();
+
+            if (!nome || !email || !mensagem) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            const numeroWhats = '5521999339873';
+            const texto = `Olá! Meu nome é ${nome}.\nEmail: ${email}\nMensagem: ${mensagem}`;
+            const textoEncoded = encodeURIComponent(texto);
+            const url = `https://api.whatsapp.com/send?phone=${numeroWhats}&text=${textoEncoded}`;
+            window.open(url, '_blank');
+        });
+
+        const cartCountElement = document.querySelector('.cart-count');
+        const carrinhoModal = document.getElementById("carrinho-modal");
+        const overlay = document.getElementById("overlay");
+        const itensCarrinho = document.getElementById("itens-carrinho");
+        const totalEl = document.getElementById("total");
+        const hero = document.querySelector('.hero');
+
+        let totalCarrinho = 0;
+        let carrinho = {}; // { nomeItem: { quantidade: X, preco: Y } }
+
+        document.querySelectorAll('.card').forEach(card => {
+            let quantidade = 0;
+
+            const btnMenor = card.querySelector('.btn-menor');
+            const btnMaior = card.querySelector('.btn-maior');
+            const botaoCarrinho = card.querySelector('.botao-carrinho');
+            const nome = card.querySelector('h3').childNodes[0].textContent.trim();
+            const precoTexto = card.querySelector('.preco').textContent.replace("R$", "").trim().replace(",", ".");
+            const preco = parseFloat(precoTexto);
+
+            const atualizarTextoBotao = () => {
+                botaoCarrinho.textContent = quantidade === 0 ? "Adicionar" : `Adicionar (${quantidade})`;
+            };
+
+            const atualizarCarrinho = () => {
+                if (quantidade > 0) {
+                    carrinho[nome] = { quantidade, preco };
+                } else {
+                    delete carrinho[nome];
+                }
+            };
+
+            btnMenor.addEventListener('click', () => {
+                if (quantidade > 0) {
+                    quantidade--;
+                    totalCarrinho = Math.max(0, totalCarrinho - 1);
+                    cartCountElement.textContent = totalCarrinho;
+                    atualizarTextoBotao();
+                    atualizarCarrinho();
+                }
+            });
+
+            btnMaior.addEventListener('click', () => {
+                quantidade++;
+                totalCarrinho++;
+                cartCountElement.textContent = totalCarrinho;
+                atualizarTextoBotao();
+                atualizarCarrinho();
+            });
+
+            botaoCarrinho.addEventListener('click', () => {
+                quantidade++;
+                totalCarrinho++;
+                cartCountElement.textContent = totalCarrinho;
+                atualizarTextoBotao();
+                atualizarCarrinho();
+            });
+
+            atualizarTextoBotao();
+        });
+
+        function abrirCarrinho() {
+            itensCarrinho.innerHTML = "";
+            let total = 0;
+
+            for (let nome in carrinho) {
+                const item = carrinho[nome];
+                const subtotal = item.quantidade * item.preco;
+                total += subtotal;
+
+                itensCarrinho.innerHTML += `
+        <p>${item.quantidade}x ${nome} – R$ ${subtotal.toFixed(2).replace(".", ",")}</p>
+        `;
+            }
+
+            totalEl.textContent = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
+            carrinhoModal.classList.remove("hidden");
+            overlay.classList.remove("hidden");
+
+            // Aplica o blur no banner hero
+            hero.classList.add('blur');
+        }
+
+        function fecharCarrinho() {
+            carrinhoModal.classList.add("hidden");
+            overlay.classList.add("hidden");
+
+            // Remove o blur no banner hero
+            hero.classList.remove('blur');
+        }
+
+        document.getElementById("icone-carrinho").addEventListener("click", abrirCarrinho);
+        document.querySelector("#carrinho-modal button").addEventListener("click", fecharCarrinho);
+        overlay.addEventListener("click", fecharCarrinho);
+
+        const botaoEntrar = document.getElementById('btn-entrar');
+
+        botaoEntrar.addEventListener('click', function () {
+            window.open('login.html', '_blank');
+        });
+        document.getElementById('btn-entrar').addEventListener('click', () => {
+            window.open('login.html', '_blank');
+        });
+
+
+
+    </script>
+
+    <div class="fundo-img">
+        <img src="img/baixo.png" alt="Imagem do fundo" />
+    </div>
+</body>
+
+</html>

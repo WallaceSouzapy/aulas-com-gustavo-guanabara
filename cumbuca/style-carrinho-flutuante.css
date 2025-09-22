@@ -1,0 +1,675 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(img/Background.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.hero {
+  height: 100vh;
+  background: url('img/banner.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  z-index: 100;
+}
+
+/* ALTERAÇÃO: rename overlay para hero-overlay para evitar conflito */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* escurece a imagem do banner sem borrar */
+  z-index: 1;
+}
+
+.hero.blur {
+  filter: blur(6px);
+  transition: filter 0.3s ease;
+  pointer-events: none;
+  /* evita clicar no conteúdo embaçado */
+}
+
+
+.hero-conteudo {
+  position: relative;
+  z-index: 2;
+  padding: 40px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.botao-hero {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-hero i {
+  font-size: 1rem;
+}
+
+.botao-hero:hover {
+  background-color: #e67e00;
+}
+
+
+.botao-entrar {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-entrar:hover {
+  background-color: #e0a800;
+}
+
+
+.botao-hero:hover {
+  background-color: #e67e00;
+}
+
+/* Navbar e conteúdo geral continuam iguais ao original */
+.topo {
+  position: relative;
+}
+
+.topo img {
+  width: 100%;
+  height: 181px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8rem;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 15px 15px;
+  filter: blur(0.2px);
+  transition: all 0.3s ease;
+  height: 105px;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar.shrink {
+  padding: 5px 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 70px;
+}
+
+.logo-nav.shrink-logo img {
+  background-color: transparent;
+  border-radius: 0;
+  width: 6rem;
+  transition: all 0.3s ease;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.links a:hover {
+  transform: scale(0.5s) ease;
+}
+
+.links:hover {
+  transform: scale(0.5s) ease;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #ff4e00;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* Seções principais */
+.main-conteiner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+  margin-top: 80px;
+}
+
+.esquerda,
+.direita {
+  flex: 1 1 45%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.esquerda {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.direita img {
+  width: 80%;
+  height: auto;
+  margin-top: -10px;
+}
+
+.titulo-sobre {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.descricao {
+  font-size: 20px;
+  text-align: justify;
+  max-width: 500px;
+}
+
+.menu-tapiocas {
+  padding: 50px;
+  text-align: center;
+  margin-top: 8rem;
+  scroll-margin-top: 100px;
+}
+
+.titulo-cardapio {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.cardapio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* CARD COM FUNDO ESCURO DE IMAGEM */
+.card {
+  position: relative;
+  background-image: url('https://cdn.dicionariopopular.com/imagens/girias-nordestinas-og.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  color: white;
+  padding: 10px 20px 40px;
+}
+
+/* Escurece o fundo */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 0;
+}
+
+/* Conteúdo acima do escurecimento */
+.card img,
+.card h3,
+.card p,
+.card .preco,
+.card .botao-carrinho {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img,
+.card p,
+.card h3,
+.card .preco {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img,
+.card:hover p,
+.card:hover h3,
+.card:hover .preco {
+  transform: translateY(-15px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Títulos, descrição e preço com cor menos branca */
+.card h3,
+.card p,
+.card .preco {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.preco {
+  font-weight: normal;
+  font-size: 16px;
+  margin-left: 5px;
+  opacity: 1 !important;
+  transition: none;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 10px 0 10px 0;
+}
+
+.botoes-carrinho {
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 2;
+}
+
+.botoes-carrinho button {
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  background: transparent;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-menor,
+.btn-maior {
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.btn-menor:hover,
+.btn-maior:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.botao-carrinho {
+  background: linear-gradient(135deg, #ff4e00, #ffa500);
+  color: white;
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
+
+.card:hover .botao-carrinho {
+  opacity: 1;
+}
+
+/* Contato */
+.contato {
+  padding: 60px 20px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  margin: 4rem auto 2rem auto;
+  max-width: 600px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.contato .titulo-cardapio {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.form-contato label {
+  font-weight: 600;
+  text-align: left;
+  color: #f2f2f2;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-family: inherit;
+  resize: vertical;
+  transition: outline 0.2s ease, background-color 0.3s ease;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  outline: 2px solid #ff6b00;
+  background-color: #fff;
+  color: #000;
+}
+
+.form-contato button {
+  margin-top: 10px;
+  padding: 12px 18px;
+  background: linear-gradient(45deg, #ff4e00, #ffa500);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.form-contato button:hover {
+  background: linear-gradient(45deg, #ffa500, #ff4e00);
+  transform: scale(1.05);
+}
+
+/* Imagem inferior */
+.fundo-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+
+.fundo-img img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+/* ADIÇÕES: Modal e overlay para o carrinho - somente essas classes novas */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 98;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  z-index: 999;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 15px #000;
+}
+
+.hidden {
+  display: none;
+}
+
+.itens-carrinho {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.itens-carrinho p {
+  margin: 0.5rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 2rem;
+  }
+
+  .links {
+    gap: 2rem;
+    font-size: 14px;
+  }
+
+  .logo-nav img {
+    width: 8rem;
+  }
+
+  .main-conteiner {
+    flex-direction: column;
+    margin-top: 70px;
+    padding: 0 10px;
+  }
+
+  .esquerda,
+  .direita {
+    flex: 1 1 100%;
+    padding: 10px 0;
+  }
+
+  .direita img {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .menu-tapiocas {
+    padding: 20px 10px;
+    margin-top: 4rem;
+  }
+
+  .cardapio-container {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 8px 1rem;
+  }
+
+  .links {
+    gap: 1rem;
+    font-size: 12px;
+  }
+
+  .logo-nav img {
+    width: 6rem;
+  }
+
+  .titulo-sobre {
+    font-size: 28px;
+  }
+
+  .descricao {
+    font-size: 16px;
+  }
+
+  .titulo-cardapio {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 13px;
+  }
+
+  .preco {
+    font-size: 14px;
+  }
+
+  .botao-carrinho {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .contato {
+    padding: 40px 15px;
+  }
+
+  .form-contato input,
+  .form-contato textarea {
+    font-size: 14px;
+  }
+
+  .form-contato button {
+    font-size: 15px;
+    padding: 10px 16px;
+  }
+}
+
+/* Carrinho flutuante (ícone e contador) */
+#icone-carrinho-flutuante {
+  position: fixed;
+  top: 125px;
+  /* 105px da navbar + 20px */
+  right: 20px;
+  background: linear-gradient(45deg, #ff4e00, #ffa500);
+  padding: 10px 16px;
+  border-radius: 30px;
+  z-index: 1000;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#icone-carrinho-flutuante:hover {
+  background: linear-gradient(45deg, #ffa500, #ff4e00);
+}
+
+#icone-carrinho-flutuante.hidden {
+  display: none;
+}
+
+#icone-carrinho-flutuante .cart-count {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 7px;
+  font-size: 14px;
+}
