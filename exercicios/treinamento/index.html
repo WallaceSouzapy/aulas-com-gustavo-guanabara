@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,69 +11,90 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vw;
+            height: 100vh;
         }
+
         div {
-            
+
             height: 150px;
             width: 150px;
             margin: 0 30px;
         }
+
         #q1 {
             background-color: black;
             transition: 0.6s;
+
+            &:hover {
+                background-color: rgb(44, 44, 255);
+                box-shadow: 0 0 8px 10px rgb(41, 129, 244);
+                border-radius: 65px;
+                margin-bottom: 55px;
+                cursor: pointer;
+            }
+
+            &:focus {
+                animation: jump 1s ease;
+            }
+
         }
+
         #q2 {
             background-color: black;
             transition: 0.6s;
+
+            &:hover {
+                background-color: rgb(231, 53, 53);
+                box-shadow: 0 0 8px 10px rgb(246, 81, 81);
+                border-radius: 65px;
+                margin-bottom: 55px;
+                cursor: pointer;
+            }
+
+            &:focus {
+                animation: jump 1s ease;
+            }
+
         }
+
         #q3 {
             background-color: black;
             transition: 0.6s;
-        }
 
-        #q1:hover {
-            background-color: rgb(44, 44, 255);
-            box-shadow: 0 0 8px 10px rgb(41, 129, 244);
-            border-radius: 65px;
-            margin-bottom: 55px;
-            cursor: pointer;
-            
-        }
-        #q2:hover {
-            background-color: rgb(231, 53, 53);
-            box-shadow: 0 0 8px 10px rgb(246, 81, 81);
-            border-radius: 65px;
-            margin-bottom: 55px;
-            cursor: pointer;
-        }
-        #q3:hover {
-            background-color: rgb(3, 211, 3);
-            box-shadow: 0 0 8px 10px rgb(46, 243, 46);
-            border-radius: 65px;
-            margin-bottom: 55px;
-            cursor: pointer;
-        }
-        #q1:focus {
-            animation: jump 1s ease;
-        }
-        #q2:focus {
-            animation: jump 1s ease;
-        }
-        #q3:focus {
-            animation: jump 1s ease;
+            &:hover {
+                background-color: rgb(3, 211, 3);
+                box-shadow: 0 0 8px 10px rgb(46, 243, 46);
+                border-radius: 65px;
+                margin-bottom: 55px;
+                cursor: pointer;
+            }
+
+            &:focus {
+                animation: jump 1s ease;
+            }
+
         }
 
         @keyframes jump {
-            0% {transform: translateY(0);}
-            50% {transform: translateY(-30px);}
-            100% {transform: translateY(0);}
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-30px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="q1" tabindex="0"></div>
     <div id="q2" tabindex="0"></div>
     <div id="q3" tabindex="0"></div>
 </body>
+
 </html>
