@@ -5,11 +5,13 @@
 table {
     border-collapse: collapse;
     text-align: center;
-    &:nth-child(even) {
-        background-color: gray;
-    }
+    
 }
 tr, th, td {
     border: 1px solid black;
     padding: 10px;
+}
+
+tbody tr:hover {
+    background-color: rgba(211, 211, 211, 0.384);
 }
