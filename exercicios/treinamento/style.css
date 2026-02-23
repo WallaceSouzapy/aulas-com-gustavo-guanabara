@@ -12,58 +12,186 @@
 
 body {
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
+    background: #f3f3f36d;
 }
+
+/* CONTAINER PRINCIPAL */
+
 .conteiner {
     width: 80%;
-    height: 50%;
+    max-width: 1000px;
+    min-height: 80%;
     display: flex;
     background-color: var(--roxo);
-    padding: 30px;
+    padding: 8px;
     border-radius: 20px;
-    box-shadow: 4px 4px 6px 1px black;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
 }
+
+/* IMAGEM */
 
 .for-img {
     width: 50%;
     height: 100%;
-    margin-right: 50px;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
 }
+
 .for-img img {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 90px;
 }
+
+/* FORMULÁRIO */
 
 .form {
     background-color: var(--transparente);
-    padding: 20px;
+    padding: 30px 20px;
     border-radius: 15px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.form form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* TOPO */
 
 .box1 {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    align-items: center;
 }
 
 .titulo-cadastro {
     color: white;
     text-shadow: 1px 1px 2px black;
-    font-weight: 0.80rem;
-    text-decoration: underline;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
+/* BOTÃO ENTRAR */
+
 .btn-entrar {
-    padding: 0.50rem;
-    width: 5rem;
+    padding: 0.4rem 0.6rem;
     background-color: var(--roxo);
     color: white;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
-        &:hover {
-            background-color: rgb(107, 33, 176);
-        }
+    transition: 0.3s ease;
+}
+
+.btn-entrar:hover {
+    background-color: rgb(107, 33, 176);
+}
+
+/* GRID INPUTS */
+
+.input-grup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.input-box label {
+    font-size: 0.8rem;
+    
+}
+
+.input-box input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    outline: none;
+}
+
+/* GENERO */
+
+.genero {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gen-grup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.genero-input {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+    font-size: 0.85rem;
+}
+
+/* BOTÃO FINAL */
+
+.btn-fim {
+    margin-top: 0.5rem;
+    width: 100%;
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--roxo);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-fim:hover {
+    background-color: rgb(107, 33, 176);
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    .conteiner {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .for-img {
+        display: none;
+    }
+
+    .for-img img {
+        max-width: 300px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .input-grup {
+        grid-template-columns: 1fr;
+    }
+
+    .gen-grup {
+        grid-template-columns: 1fr;
+    }
 }
